@@ -1,0 +1,329 @@
+{
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.sneak": true,
+  "editor.lineNumbers": "relative",
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": [
+          "comment",
+          "entity.other.attribute-name",
+          "keyword",
+          "markup.underline.link",
+          "storage.modifier",
+          "storage.type",
+          "string.url",
+          "variable.language.super",
+          "variable.language.this"
+        ],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": [
+          "keyword.operator",
+          "keyword.other.type",
+          "storage.modifier.import",
+          "storage.modifier.package",
+          "storage.type.built-in",
+          "storage.type.function.arrow",
+          "storage.type.generic",
+          "storage.type.java",
+          "storage.type.primitive"
+        ],
+        "settings": {
+          // "fontStyle": ""
+        }
+      }
+    ]
+  },
+  "vim.leader": "<space>",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "n", "h"],
+      "commands": [":nohl"]
+    },
+    // Open splits
+    {
+      "before": ["<leader>", "s", "v"],
+      "commands": ["workbench.action.splitEditor"]
+    },
+    {
+      "before": ["<leader>", "s", "o"],
+      "commands": ["workbench.action.splitEditorOrthogonal"]
+    },
+    // Close all splits
+    {
+      "before": ["<leader>", "q", "q"],
+      "commands": ["workbench.action.closeEditorsInOtherGroups"]
+    },
+    {
+      "before": ["<leader>", "e"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    {
+      "before": ["<leader>", "f"],
+      "commands": ["workbench.view.explorer"]
+    },
+    // Go to next error or warning
+    {
+      "before": ["[", "d"],
+      "commands": ["editor.action.marker.nextInFiles"]
+    },
+
+    // Go to prev error or warning
+    {
+      "before": ["]", "d"],
+      "commands": ["editor.action.marker.prevInFiles"]
+    },
+    // Command palette
+    {
+      "before": ["<Leader>", "o", "p"],
+      "commands": ["workbench.action.showCommands"]
+    },
+    // Open active buffers
+    {
+      "before": ["<leader>", "o", "a"],
+      "commands": ["workbench.action.showEditorsInActiveGroup"]
+    },
+    // Open files in current folder
+    {
+      "before": ["<leader>", "o", "f"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["<tab>"],
+      "commands": ["workbench.action.nextEditor"]
+    },
+    {
+      "before": ["<S-tab>"],
+      "commands": ["workbench.action.previousEditor"]
+    },
+    // X,S Delete without copying
+    {
+      "before": ["x"],
+      "after": ["\"", "_", "x"]
+    },
+    // Scrolling and keeping cursor at center
+    {
+      "before": ["J"],
+      "after": ["m", "z", "J", "`", "z"]
+    },
+    {
+      "before": ["<C-d>"],
+      "after": ["<C-d>", "z", "z"]
+    },
+    {
+      "before": ["<C-u>"],
+      "after": ["<C-u>", "z", "z"]
+    },
+    {
+      "before": ["n"],
+      "after": ["n", "z", "z", "z", "v"]
+    },
+    {
+      "before": ["N"],
+      "after": ["N", "z", "z", "z", "v"]
+    },
+    // Deleting without yanking
+    {
+      "before": ["<leader>", "d"],
+      "after": ["\"", "_", "d"]
+    },
+    // New tab
+    {
+      "before": ["<Leader>", "t", "n"],
+      "commands": [":tabnext"]
+    },
+    // Previous tab
+    {
+      "before": ["<Leader>", "t", "p"],
+      "commands": [":tabprev"]
+    },
+    // New tab
+    {
+      "before": ["<Leader>", "t", "t"],
+      "commands": [":tabnew"]
+    },
+    // Closes all other open tabs
+    {
+      "before": ["<Leader>", "t", "o"],
+      "commands": [":tabo"]
+    }
+    // Show all symbols
+    // {
+    //   "before": ["<leader>", "o", "g"],
+    //   "commands": ["workbench.action.showAllSymbols"]
+    // },
+    // GOTO Symbol
+    // {
+    //   "before": ["<Leader>", "g"],
+    //   "commands": ["workbench.action.gotoSymbol"]
+    // }
+  ],
+  "vim.visualModeKeyBindings": [
+    // Deleting without yanking
+    {
+      "before": ["<leader>", "d"],
+      "after": ["\"", "_", "d"]
+    },
+    // Paste over and keep the yanked text
+    {
+      "before": ["P"],
+      "after": ["\"", "_", "d", "P"]
+    }
+  ],
+  // Normal Mode Key bindings
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["Y"],
+      "after": ["y", "$"]
+    }
+  ],
+
+  // Editor settings
+  "editor.fontFamily": "Hack Nerd Font Mono, 'Courier New', monospace",
+  "editor.fontVariations": false,
+  "editor.fontWeight": "400",
+  "editor.wordWrap": "on",
+  "editor.wrappingIndent": "same",
+  "editor.wordWrapColumn": 90,
+  "editor.fontLigatures": false,
+  "editor.formatOnSave": true,
+  "editor.fontSize": 15,
+  // Save on focus change
+  // "files.autoSave": "onFocusChange",
+  "editor.snippetSuggestions": "top",
+  "editor.suggestSelection": "first",
+  "editor.minimap.enabled": false,
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "editor.semanticHighlighting.enabled": true,
+  "editor.cursorBlinking": "solid",
+  "editor.cursorStyle": "block",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.autoClosingBrackets": "always",
+  "editor.autoClosingQuotes": "always",
+  "editor.formatOnPaste": false, // required
+  "editor.formatOnType": false, // required
+  "editor.formatOnSaveMode": "file", // required to format on save
+  "editor.occurrencesHighlight": "off",
+  "editor.tabSize": 2,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.parameterHints.enabled": true,
+  "editor.indentSize": "tabSize",
+  // Tailwindcss quick suggestions
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  // Workbench settings
+  "workbench.sideBar.location": "right",
+  "workbench.startupEditor": "none",
+  "workbench.editor.enablePreview": false,
+  // Disable vscode split controls
+  "workbench.layoutControl.enabled": false,
+  "workbench.editor.showTabs": "single",
+  "workbench.colorTheme": "Ayu Dark",
+  // Terminal
+  "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
+  "terminal.integrated.fontSize": 15,
+  // Prettier
+  "prettier.jsxSingleQuote": true,
+  "prettier.singleQuote": true,
+  "prettier.tabWidth": 2,
+  "prettier.arrowParens": "avoid",
+  "prettier.ignorePath": "~/.config/vscode/.prettierignore",
+  // Others
+  "css.lint.unknownAtRules": "ignore",
+  "eslint.run": "onSave",
+  "security.workspace.trust.untrustedFiles": "open",
+  "typescript.validate.enable": true,
+  "javascript.validate.enable": true,
+  "git.openRepositoryInParentFolders": "never",
+  // No whitespace
+  "editor.renderWhitespace": "none",
+  // Remove bottom statusbar
+  // "workbench.statusBar.visible": false,
+  // Disable far right bar
+  "workbench.activityBar.location": "hidden",
+  // Hide cursor in vertical bar
+  "editor.hideCursorInOverviewRuler": true,
+  // Disable horizontal and vertical scrollingbar
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.scrollbar.vertical": "hidden",
+  // Disable close file
+  "workbench.editor.tabActionCloseVisibility": false,
+  // Disable filetree colors
+  "explorer.decorations.colors": false,
+  // More indentation space in filetree
+  "workbench.tree.indent": 15,
+  // Enable nested folders
+  "explorer.compactFolders": false,
+  // Disable vscode git
+  // "git.decorations.enabled": false,
+  // Disable git decorations on the left
+  "editor.glyphMargin": false,
+  "editor.folding": false,
+  // Disable current line highlight
+  "editor.renderLineHighlight": "none",
+  // Disable different color for brackets
+  // "editor.bracketPairColorization.enabled": false,
+  // Disable bracket pairs highlighting
+  // "editor.guides.highlightActiveBracketPair": false,
+  // "editor.guides.bracketPairsHorizontal": false,
+  // "editor.matchBrackets": "never",
+  "editor.matchBrackets": "near",
+  // Disable code folding
+  "editor.showFoldingControls": "never",
+  // Top titlebar empty + disable it
+  "window.title": " ",
+  "window.commandCenter": false,
+  // scm git
+  "scm.diffDecorationsGutterPattern": {
+    "added": false,
+    "modified": false
+  },
+  "scm.diffDecorations": "none",
+  "scm.diffDecorationsGutterAction": "none",
+  // Swap multicursor modifier from cmd + click to cmd
+  "editor.multiCursorModifier": "ctrlCmd",
+  // Prevent from opening vscode on a folder
+  "window.restoreWindows": "none",
+  // Terminal issues
+  "terminal.integrated.gpuAcceleration": "off",
+  // Terminal cursor color
+  "workbench.colorCustomizations": {
+    "terminalCursor.foreground": "#f6cd76"
+  },
+  "vim.highlightedyank.enable": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "editor.accessibilitySupport": "off",
+  // Emmet - enable emmet hints in jtx/tsx
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact"
+  },
+  // Emmet priority suggestions
+  "emmet.showSuggestionsAsSnippets": true,
+  // Tailwindcss suggestion in cva func
+  "tailwindCSS.experimental.classRegex": [
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ],
+  // Tailwind suggestions in classAttributes
+  "tailwindCSS.classAttributes": ["class", "className", "ngClass", ".*Styles*"],
+  // Push two directories i.e. /client /server simultaneously.
+  "files.exclude": {
+    "**/.git": false
+  },
+  "vsicons.dontShowNewVersionMessage": true,
+  "workbench.editor.customLabels.patterns": {
+    "**/app/**/page.js": "Page: ${dirname}"
+  },
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "workbench.iconTheme": "vscode-icons"
+}

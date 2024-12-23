@@ -1,0 +1,307 @@
+// Place your key bindings in this file to override the defaults
+[
+  // Vim move between splits
+  {
+    "key": "ctrl+s",
+    "command": "workbench.action.files.save"
+  },
+  {
+    "key": "ctrl+h",
+    // "command": "workbench.action.focusLeftGroup",
+    "command": "workbench.action.navigateLeft"
+    // "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
+  },
+  {
+    "key": "ctrl+l",
+    // "command": "workbench.action.focusRightGroup",
+    "command": "workbench.action.navigateRight"
+    // "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
+  },
+  {
+    "key": "ctrl+k",
+    // "command": "workbench.action.focusAboveGroup",
+    "command": "workbench.action.navigateUp"
+    // "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
+  },
+  {
+    "key": "ctrl+j",
+    // "command": "workbench.action.focusBelowGroup",
+    "command": "workbench.action.navigateDown"
+    // "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "workbench.action.focusAboveGroup",
+    "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "workbench.action.focusBelowGroup",
+    "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
+  },
+  {
+    "key": ", e",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "!editorTextFocus"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "list.focusUp",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "list.focusDown",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "enter",
+    "command": "list.select",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+a",
+    "command": "explorer.newFile",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+r",
+    "command": "renameFile",
+    "when": "filesExplorerFocus"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "selectNextSuggestion",
+    "when": "suggestWidgetVisible"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "selectPrevSuggestion",
+    "when": "suggestWidgetVisible"
+  },
+
+  {
+    "key": "ctrl+n",
+    "command": "workbench.action.quickOpenSelectNext",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "workbench.action.quickOpenSelectPrevious",
+    "when": "inQuickOpen"
+  },
+  // Others
+  {
+    // "key": "shift+alt+k",
+    "key": "alt+k",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    // "key": "shift+alt+j",
+    "key": "alt+j",
+    "command": "editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  // Toggle integrated terminal
+  {
+    "key": "ctrl+;",
+    "command": "workbench.action.togglePanel"
+  },
+  // Focus terminal
+  {
+    "key": "ctrl+t",
+    "command": "workbench.action.terminal.focus",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+t",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "terminalFocus"
+  },
+  // Next terminal
+  {
+    "key": "ctrl+alt+n",
+    "command": "workbench.action.terminal.focusNext"
+  },
+  // Previous terminal
+  {
+    "key": "ctrl+alt+p",
+    "command": "workbench.action.terminal.focusPrevious"
+  },
+
+  {
+    "key": "shift+k",
+    "command": "editor.action.showHover",
+    "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
+  },
+  // TAB doesnt accept
+  {
+    "key": "tab",
+    "command": "-acceptSelectedSuggestion",
+    "when": "suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && textInputFocus"
+  },
+  // Go to definition, go to implementation
+  // {
+  //   "key": "ctrl+alt+d",
+  //   "command": "editor.action.goToDeclaration",
+  //   "when": "editorTextFocus && !editorReadonly"
+  // },
+  // {
+  //   "key": "ctrl+alt+i",
+  //   "command": "editor.action.goToImplementation",
+  //   "when": "editorTextFocus && !editorReadonly"
+  // },
+  // Next and previous tab by pressing tab key
+  {
+    "key": "tab",
+    "command": "workbench.action.nextEditor",
+    "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
+  },
+  {
+    "key": "shift+tab",
+    "command": "workbench.action.previousEditor",
+    "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
+  },
+
+  // Emmet - Working with html (better than vim cause bugs)
+  {
+    "key": "cmd+m cmd+i",
+    "command": "editor.emmet.action.balanceIn",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+m cmd+o",
+    "command": "editor.emmet.action.balanceOut",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+m cmd+w",
+    "command": "editor.emmet.action.wrapWithAbbreviation",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+m cmd+m",
+    "command": "editor.emmet.action.matchTag",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+m cmd+e",
+    "command": "editor.action.smartSelect.expand",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+m cmd+r",
+    "command": "editor.emmet.action.updateTag",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+m cmd+backspace",
+    "command": "editor.emmet.action.removeTag",
+    "when": "editorTextFocus"
+  },
+
+  // Kill current terminal
+  {
+    "key": "ctrl+shift+w",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus"
+  },
+  // Kill all terminals
+  {
+    "key": "ctrl+k ctrl+w",
+    "command": "workbench.action.terminal.killAll",
+    "when": "terminalFocus"
+  },
+  // Split current terminal
+  {
+    "key": "ctrl+\\",
+    "command": "workbench.action.terminal.split",
+    "when": "terminalFocus"
+  },
+  // Scroll up/down one line in terminal
+  {
+    "key": "ctrl+y",
+    "command": "workbench.action.terminal.scrollUp",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+e",
+    "command": "workbench.action.terminal.scrollDown",
+    "when": "terminalFocus"
+  },
+  // Scroll pageup/pagedown in terminal
+  // {
+  //   "key": "ctrl+u",
+  //   "command": "workbench.action.terminal.scrollUpPage",
+  //   "when": "terminalFocus"
+  // },
+  // {
+  //   "key": "ctrl+d",
+  //   "command": "workbench.action.terminal.scrollDownPage",
+  //   "when": "terminalFocus"
+  // },
+  // Focus prev/next split
+  {
+    "key": "ctrl+h",
+    "command": "workbench.action.terminal.focusPreviousPane",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.terminal.focusNextPane",
+    "when": "terminalFocus"
+  },
+  // Re run last command
+  {
+    "key": "ctrl+space",
+    "command": "workbench.action.terminal.runRecentCommand",
+    "when": "terminalFocus"
+  },
+
+  // Remap new file / new folder
+  // {
+  //   "key": "cmd+n",
+  //   "command": "explorer.newFile"
+  // },
+  // {
+  //   "key": "cmd+shift+n",
+  //   "command": "explorer.newFolder",
+  //   "when": "!editorFocus"
+  // },
+
+  // Skip next gb occurence forward/backwards
+  {
+    "key": "cmd+g",
+    "command": "editor.action.moveSelectionToNextFindMatch"
+  },
+  {
+    "key": "cmd+shift+g",
+    "command": "editor.action.moveSelectionToPreviousFindMatch"
+  },
+
+  // Font zoom
+  {
+    "key": "cmd+=",
+    "command": "editor.action.fontZoomIn"
+  },
+  {
+    "key": "cmd+-",
+    "command": "editor.action.fontZoomOut"
+  },
+  {
+    "key": "cmd+0",
+    "command": "editor.action.fontZoomReset"
+  },
+
+  // Toggle maximized editor group
+  {
+    "key": "ctrl+m", //opt+m on macOS ?? ctrl+m
+    "command": "workbench.action.toggleMaximizedPanel"
+  },
+  {
+    "key": "ctrl+m",
+    "command": "workbench.action.toggleMaximizeEditorGroup",
+    "when": "!terminalFocus"
+  }
+]
